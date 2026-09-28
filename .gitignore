@@ -1,0 +1,74 @@
+# Build output
+build/
+out/
+bin/
+obj/
+dist/
+cmake-build-*/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.obj
+*.o
+*.so
+*.dylib
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+Makefile
+*.cmake
+!CMakeLists.txt
+!cmake/*.cmake
+!CMakePresets.json
+
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.sln
+*.suo
+*.user
+*.aps
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains / CLion
+.idea/
+
+# Compiled binaries
+*.a
+*.pch
+*.gch
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.bak
+*.swp
+
+# Local env
+.env
+.env.local
