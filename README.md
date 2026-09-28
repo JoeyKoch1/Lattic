@@ -3,50 +3,50 @@
 [![Release](https://img.shields.io/github/v/release/Joeykoch1/Lattic?style=flat-square)](https://github.com/Joeykoch1/Lattic/releases)
 [![Downloads](https://img.shields.io/github/downloads/Joeykoch1/Lattic/total?style=flat-square)](https://github.com/Joeykoch1/Lattic/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)](#)
-[![No Python](https://img.shields.io/badge/python-none-red?style=flat-square)](#)
+[![Made with](https://img.shields.io/badge/made%20with-C%2B%2B-blue?style=flat-square)](#)
 [![Issues](https://img.shields.io/github/issues/Joeykoch1/Lattic?style=flat-square)](https://github.com/Joeykoch1/Lattic/issues)
 [![Stars](https://img.shields.io/github/stars/Joeykoch1/Lattic?style=flat-square)](https://github.com/Joeykoch1/Lattic/stargazers)
 [![License](https://img.shields.io/github/license/Joeykoch1/Lattic?style=flat-square)](https://github.com/Joeykoch1/Lattic/blob/main/LICENSE)
 
-Lattic is a next-gen application packer. It is not a Python package. It is not a pip install. It is an exe. You run it, load your exe or dll, select the stuff you want, and it patches. Done.
+Lattic is a next-gen application packer. It is one executable. You run it, load your EXE or DLL, select what you want, and it patches. Done.
 
-If you came here looking for `pip install lattic`, this is not that. This is a Windows tool for patching binaries.
+No installer. No runtime. No toolchain. No config file that needs a config file. You double click a thing, point it at a binary, and get a patched binary back. That is the entire pitch.
+
+If you came here looking for a build system, a package manager, or something that asks you to install four other things first, this is not that. Lattic assumes you already have a compiled binary and a reason to change it.
 
 ## What it does
 
-Lattic takes a compiled `.exe` or `.dll`, lets you pick what to patch, and writes the patched result. No interpreter, no virtualenv, no runtime, no dependency resolver having a breakdown because your lockfile looked at it wrong.
-
-- Single executable. No installer.
-- Load `.exe` and `.dll` files.
-- Select patches and options.
-- Patch and save.
-- Windows native.
-- No Python. No pip. No runtime.
+- Loads `.exe` and `.dll` files.
+- Lets you select the patches you want.
+- Writes a patched binary. Done.
+- Windows native. One executable.
+- No dependencies, no runtime, no setup wizard.
+- Self-contained output.
 
 ## Quickstart
 
-1. Download the latest release from [Releases](https://github.com/Joeykoch1/Lattic/releases).
+1. Grab the latest build from [Releases](https://github.com/Joeykoch1/Lattic/releases).
 2. Run `Lattic.exe`.
 3. Load your `.exe` or `.dll`.
 4. Select what you want patched.
-5. Click Patch.
+5. Hit Patch.
 6. Done.
 
-If Windows SmartScreen acts like you just handed it a suspicious sandwich, that is normal for unsigned tools. Check the source, build it yourself, or click through. Your call.
+If Windows SmartScreen gives you the sideways look it gives every unsigned tool, that is normal. Check the source, build it yourself, or click through. Your call, your machine.
 
 ## Why Lattic
 
-Most packers make you install a toolchain, configure a build, and question your choices. Lattic assumes you already have a binary and a reason to patch it. It does not care what language the target was written in. It loads the file, applies what you selected, and writes the output.
+Most packers start with a toolchain and end with a stack trace. Lattic starts with your binary and ends with your binary, slightly different. It does not care what the target was written in. It loads the file, applies what you selected, and writes the result.
 
-If you enjoy dependency hell, there are plenty of other tools. Lattic is for when you want the job done before your coffee gets cold.
+Other tools will happily spend your afternoon on dependency resolution. Lattic is for when you want the job finished before your coffee gets cold.
 
 ## Building
 
-Release builds are in [Releases](https://github.com/Joeykoch1/Lattic/releases). To build from source, clone the repo and follow the build notes for your toolchain.
+Prebuilt binaries live in [Releases](https://github.com/Joeykoch1/Lattic/releases). To build from source, clone the repo and follow the build notes for your toolchain.
 
 ## Contributing
 
-Issues and pull requests are welcome. Open an issue before a large PR so we can agree on whether it belongs in the tool. Keep changes focused. Test your changes. Keep the code clean. Do not add a Python dependency. Seriously.
+Issues and pull requests are welcome. Open an issue before a large PR so we can agree on whether it belongs in the core tool. Keep changes focused, keep the code clean, and test your changes.
 
 ## License
 
