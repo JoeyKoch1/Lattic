@@ -26,7 +26,7 @@ static LRESULT WINAPI WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam,
                                                              LPARAM lParam);
 
-int main(int, char**)
+int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 {
     lattic::util::Logger::Init("lattic.log");
     lattic::util::Logger::Info("Lattic starting up");
@@ -69,7 +69,6 @@ int main(int, char**)
 
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
     io.IniFilename = "lattic.ini";
 
     lattic::ui::Application app;
@@ -247,7 +246,7 @@ static LRESULT WINAPI WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
         return 0;
 
     case WM_SYSCOMMAND:
-        // Disable ALT application menu.
+        // Swallow SC_KEYMENU so the ALT menu never opens.
         if ((wParam & 0xfff0) == SC_KEYMENU)
         {
             return 0;

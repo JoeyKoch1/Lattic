@@ -1,0 +1,4 @@
+#include "lattic/ui/Resources.hpp"
+
+// Embedded so the tool stays a single executable with no asset directory to ship.
+IDR_LATTIC_FONT RCDATA "../assets/fonts/JetBrainsMono-Bold.ttf"
